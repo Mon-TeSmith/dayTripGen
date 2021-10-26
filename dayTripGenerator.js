@@ -1,6 +1,6 @@
 "use strict"
 
-/*let city = ["Seattle, WA", "Atlanta, GA", "Miami, Fl", "San Diego, CA"];
+let city = ["Seattle, WA", "Atlanta, GA", "Miami, Fl", "San Diego, CA"];
 let randomNumber = Math.floor(Math.random() * city.length); {
     
 let randomCity = city[randomNumber];
@@ -26,7 +26,7 @@ let randomRecreation = recreation[randomEvent];
 } 
     let userInput = prompt("Would you like to make another selection?") 
     if (userInput === "yes"); {
-    }  */        
+    }         
     let nextCity = ["Seattle, WA", "Atlanta, GA", "Miami, Fl", "San Diego, CA"];
     let randomNnumber = Math.floor(Math.random() * nextCity.length); {
 
@@ -56,5 +56,5 @@ let randomRecreation = recreation[randomEvent];
             console.log("***CONGRATULATIONS***");
             console.log("Your Day Trip Itinerary is Complete!");
 
-            let finalAnswers = nextCity[randomNnumber] + ", " + nextRestaurant[randomRest] + ", " + nextTransport[randomTransport] + " ," + nextRecreation[randomRec]
+            let finalAnswers = nextCity[randomNnumber] + ", " + nextRestaurant[randomRest] + ", " + nextTransport[randomTransport] + ", " + nextRecreation[randomRec]
             console.log(finalAnswers)
