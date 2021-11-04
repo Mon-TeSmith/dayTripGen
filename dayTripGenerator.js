@@ -22,38 +22,40 @@ let recreationEvent = ["Concert", "Movie", "Play", "Casino"];
 let randomEvent = Math.floor(Math.random() * recreationEvent.length); 
                 
 let recEvent = recreationEvent[randomEvent];
-    console.log(recEvent);
+    console.log(recEvent); {
 
     let userInput = prompt(`Are you satisfied? \n Yes  \n No`) 
-    if (userInput === "yes") {
-        // what happens if they choose yes?
-        // make new selections! 
-    let nextCity = Math.floor(Math.random() * city.length);
 
-        nextCity = city[randomTown];
-            console.log(nextCity);
+    let newCity = Math.floor(Math.random() * city.length);
         
-    let randomRest = Math.floor(Math.random() * restaurant.length); 
-    
-        randomRest = restaurant[randomEats];
-            console.log(randomRest);
+        newCity = city[randomTown];
+        console.log(newCity);
         
-    let randomTrans = Math.floor(Math.random() * transportation.length); 
-            
-        randomTrans = transportation[transport];
-            console.log(randomTrans);
+    let newRestaurant = Math.floor(Math.random() * restaurant.length); 
         
-    let randomRec = Math.floor(Math.random() * recreationEvent.length);   
+        newRestaurant = restaurant[randomRestaurant];
+        console.log(newRestaurant);
+        
+    let newTransportation = Math.floor(Math.random() * transportation.length);    
     
-        randomRec = recreationEvent[recEvent];
-            console.log(randomRec);
-    
-    }         
+        newTransportation = transportation[randomTransportation];
+        console.log(newTransportation);
+        
+    let newRecreation = Math.floor(Math.random() * recreationEvent.length + 1);   
+        
+        newRecreation = recreationEvent[randomEvent];
+        console.log(newRecreation);
      
-        let userInputTwo = prompt("Are you in love with these choices?");
+        let userInputTwo = prompt(`Do you accept these choices? \n yes \n no`) 
+     }  /* if (condition) {
+            
+        } else {
+            
+        }
 
             console.log("***CONGRATULATIONS***");
             console.log("Your Day Trip Itinerary is Complete!");
 
-            let finalAnswers = randomCity + ", " + randomRestaurant + ", " + randomTrans + ", " + randomEvent
-            console.log(finalAnswers) 
+            let finalAnswers = nextCity + ", " + randomRest + ", " + randomTrans + ", " + randomRec
+            console.log(finalAnswers)
+            */
