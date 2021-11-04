@@ -1,60 +1,59 @@
 "use strict"
 
 let city = ["Seattle, WA", "Atlanta, GA", "Miami, Fl", "San Diego, CA"];
-let randomNumber = Math.floor(Math.random() * city.length); {
+let randomTown = Math.floor(Math.random() * city.length); 
     
-let randomCity = city[randomNumber];
+let randomCity = city[randomTown];
     console.log(randomCity);
-}
+
 let restaurant = ["Starbucks", "Copelands", "Hunter Steakhouse", "J Alexanders"]; 
-let randomNumberr = Math.floor(Math.random() * restaurant.length); {
+let randomRestaurant = Math.floor(Math.random() * restaurant.length); 
     
- let randomRestaurant = restaurant[randomNumberr];
-    console.log(randomRestaurant);
-}
+let randomEats = restaurant[randomRestaurant];
+    console.log(randomEats);
+
 let transportation = ["Uber", "Lyft", "Taxi", "Limo"]; 
-let randomTrans = Math.floor(Math.random() * transportation.length); {
+let randomTransportation = Math.floor(Math.random() * transportation.length); 
         
-let randomTransportation = transportation[randomTrans];
-    console.log(randomTransportation);
-}
-let recreation = ["Concert", "Movie", "Play", "Casino"];
-let randomEvent = Math.floor(Math.random() * recreation.length); {
+let transport = transportation[randomTransportation];
+    console.log(transport);
+
+let recreationEvent = ["Concert", "Movie", "Play", "Casino"];
+let randomEvent = Math.floor(Math.random() * recreationEvent.length); 
                 
-let randomRecreation = recreation[randomEvent];
-    console.log(randomRecreation);
-} 
-    let userInput = prompt("Would you like to make another selection?") 
-    if (userInput === "yes"); {
+let recEvent = recreationEvent[randomEvent];
+    console.log(recEvent);
+
+    let userInput = prompt(`Are you satisfied? \n Yes  \n No`) 
+    if (userInput === "yes") {
+        // what happens if they choose yes?
+        // make new selections! 
+    let nextCity = Math.floor(Math.random() * city.length);
+
+        nextCity = city[randomTown];
+            console.log(nextCity);
+        
+    let randomRest = Math.floor(Math.random() * restaurant.length); 
+    
+        randomRest = restaurant[randomEats];
+            console.log(randomRest);
+        
+    let randomTrans = Math.floor(Math.random() * transportation.length); 
+            
+        randomTrans = transportation[transport];
+            console.log(randomTrans);
+        
+    let randomRec = Math.floor(Math.random() * recreationEvent.length);   
+    
+        randomRec = recreationEvent[recEvent];
+            console.log(randomRec);
+    
     }         
-    let nextCity = ["Seattle, WA", "Atlanta, GA", "Miami, Fl", "San Diego, CA"];
-    let randomNnumber = Math.floor(Math.random() * nextCity.length); {
-
-    let randomCcity = nextCity[randomNnumber];
-        console.log(randomCcity);
-    }
-    let nextRestaurant = ["Starbucks", "Copelands", "Hunter Steakhouse", "J Alexanders"];
-    let randomRest = Math.floor(Math.random() * nextRestaurant.length); {
-
-    let randomRrestaurant = nextRestaurant[randomRest];
-        console.log(randomRrestaurant);
-    }
-    let nextTransport = ["Uber", "Lyft", "Taxi", "Limo"];
-    let randomTransport = Math.floor(Math.random() * nextTransport.length); {
-
-    let randomTtrans = nextTransport[randomTransport];
-        console.log(randomTtrans);
-    }
-    let nextRecreation = ["Concert", "Movie", "Play", "Casino"];
-    let randomRec = Math.floor(Math.random() * nextRecreation.length); {
-
-    let randomEventRec = nextRecreation[randomRec];
-        console.log(randomEventRec);
-    }
-        let userInputTwo = prompt("Are these choices to your liking?");
+     
+        let userInputTwo = prompt("Are you in love with these choices?");
 
             console.log("***CONGRATULATIONS***");
             console.log("Your Day Trip Itinerary is Complete!");
 
-            let finalAnswers = nextCity[randomNnumber] + ", " + nextRestaurant[randomRest] + ", " + nextTransport[randomTransport] + ", " + nextRecreation[randomRec]
-            console.log(finalAnswers)
+            let finalAnswers = randomCity + ", " + randomRestaurant + ", " + randomTrans + ", " + randomEvent
+            console.log(finalAnswers) 
