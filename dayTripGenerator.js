@@ -1,61 +1,67 @@
 "use strict"
 
-let city = ["Seattle, WA", "Atlanta, GA", "Miami, Fl", "San Diego, CA"];
-let randomTown = Math.floor(Math.random() * city.length); 
-    
-let randomCity = city[randomTown];
-    console.log(randomCity);
+let destination = ["Seattle, WA", "Atlanta, GA", "Miami, Fl", "San Diego, CA"];
 
 let restaurant = ["Starbucks", "Copelands", "Hunter Steakhouse", "J Alexanders"]; 
-let randomRestaurant = Math.floor(Math.random() * restaurant.length); 
-    
-let randomEats = restaurant[randomRestaurant];
-    console.log(randomEats);
 
 let transportation = ["Uber", "Lyft", "Taxi", "Limo"]; 
-let randomTransportation = Math.floor(Math.random() * transportation.length); 
-        
-let transport = transportation[randomTransportation];
-    console.log(transport);
 
 let recreationEvent = ["Concert", "Movie", "Play", "Casino"];
-let randomEvent = Math.floor(Math.random() * recreationEvent.length); 
-                
-let recEvent = recreationEvent[randomEvent];
-    console.log(recEvent); {
 
-    let userInput = prompt(`Are you satisfied? \n Yes  \n No`) 
-
-    let newCity = Math.floor(Math.random() * city.length);
-        
-        newCity = city[randomTown];
-        console.log(newCity);
-        
-    let newRestaurant = Math.floor(Math.random() * restaurant.length); 
-        
-        newRestaurant = restaurant[randomRestaurant];
-        console.log(newRestaurant);
-        
-    let newTransportation = Math.floor(Math.random() * transportation.length);    
+function randomTripGenerator(randomChoices) {
     
-        newTransportation = transportation[randomTransportation];
-        console.log(newTransportation);
-        
-    let newRecreation = Math.floor(Math.random() * recreationEvent.length + 1);   
-        
-        newRecreation = recreationEvent[randomEvent];
-        console.log(newRecreation);
-     
-        let userInputTwo = prompt(`Do you accept these choices? \n yes \n no`) 
-     }  /* if (condition) {
-            
-        } else {
-            
-        }
+    return randomChoices[Math.floor(Math.random() * randomChoices.length)];
+   
+}
 
-            console.log("***CONGRATULATIONS***");
+let randomDestination = randomTripGenerator(destination);
+console.log(randomDestination);
+
+let randomRestaurant = randomTripGenerator(restaurant);
+console.log(randomRestaurant);
+
+let randomTransportation = randomTripGenerator(transportation);
+console.log(randomTransportation);
+
+let randomRecreationEvent = randomTripGenerator(recreationEvent);
+console.log(randomRecreationEvent);
+
+let randomTrip = [randomDestination, randomRestaurant, randomTransportation, randomRecreationEvent];
+// randomTrip is the (arrayOfFeatures)
+
+function displayRandomTrip(randomTrip) {
+    let finalPreliminaryTrip = "";
+    for (let i = 0; i < randomTrip; i++){
+        finalPreliminaryTrip += randomTrip[i] + "\n"; 
+    }
+    alert(finalPreliminaryTrip);
+     console.log(randomTrip);
+
+}
+ console.log("Are you satisfied with your itinerary? \n 'Yes'  \n 'No'") 
+{
+    
+    let newCity = [city(randomTrip)]
+            
+    let newRestaurant = [restaurant(randomTrip)]
+        
+    let newTransportation = [transportation(randomTrip)]    
+        
+    let newRecreation = [recreationEvent(randomTrip)]
+
+    function getRandomElementFromArray(array) {
+        
+    }
+             
+    let newRandomTrip = [newCity, newRestaurant, newTransportation, newRecreation]
+        
+    }   
+    
+    let userInput = prompt('Do you accept these choices? \n yes \n no') 
+      
+            console.log("**CONGRATULATIONS**");
             console.log("Your Day Trip Itinerary is Complete!");
 
-            let finalAnswers = nextCity + ", " + randomRest + ", " + randomTrans + ", " + randomRec
+            let finalAnswers = newCity + ", " + newRestaurant + ", " +  newTransportation + ", " + newRecreation
             console.log(finalAnswers)
-            */
+    
