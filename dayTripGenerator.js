@@ -10,8 +10,7 @@ let recreationEvent = ["Concert", "Movie", "Play", "Casino"];
 
 function randomTripGenerator(randomChoices) {
     
-    return randomChoices[Math.floor(Math.random() * randomChoices.length)];
-   
+    return randomChoices[Math.floor(Math.random() * randomChoices.length)];   
 }
 
 let randomDestination = randomTripGenerator(destination);
@@ -35,33 +34,51 @@ function displayRandomTrip(randomTrip) {
         finalPreliminaryTrip += randomTrip[i] + "\n"; 
     }
     alert(finalPreliminaryTrip);
-     console.log(randomTrip);
 
-}
- console.log("Are you satisfied with your itinerary? \n 'Yes'  \n 'No'") 
-{
-    
-    let newCity = [city(randomTrip)]
-            
-    let newRestaurant = [restaurant(randomTrip)]
-        
-    let newTransportation = [transportation(randomTrip)]    
-        
-    let newRecreation = [recreationEvent(randomTrip)]
+function app() {
+    let userSatisfied = false;
+    while (userSatisfied === false) {
+        displayFinalPreliminaryTrip();
 
-    function getRandomElementFromArray(array) {
-        
+        let userInput = prompt("Do you like your trip, Yes or No");
+        if (userInput === "Yes") {
+            userSatisfied = true;
+            displayFinalPreliminaryTrip(randomTrip);
+
+        } else {
+            function reselectTripChoices() {    
+            }
+        }
+        alert("Trip complete, enjoy!");
     }
-             
-    let newRandomTrip = [newCity, newRestaurant, newTransportation, newRecreation]
-        
-    }   
-    
-    let userInput = prompt('Do you accept these choices? \n yes \n no') 
-      
-            console.log("**CONGRATULATIONS**");
-            console.log("Your Day Trip Itinerary is Complete!");
+}
 
-            let finalAnswers = newCity + ", " + newRestaurant + ", " +  newTransportation + ", " + newRecreation
-            console.log(finalAnswers)
-    
+
+
+    function newTripSelections() {
+        displayFinalPreliminaryTrip(randomTrip);
+        let userChoice = prompt("Which one do you wish to change? 1 for Destination \n 2 for Restaurant \n 3 for Transportation \n 4 for Event");
+
+        switch (userChoice) {
+            case "1":
+                trip[0] = randomTripGenerator(destination);
+                break;
+
+            case "2":
+                trip[1] = randomTripGenerator(restaurant);
+                break;
+
+            case "3":
+                trip[2] = randomTripGenerator(transportation);
+                break;
+
+            case "4":
+                trip[3] = randomTripGenerator(recreationEvent);
+                break;
+        
+            default:
+                alert("Option selected unavailable. Please tyr again! Please select 1-4.");
+                newTripSelections();
+        }
+    }
+}
