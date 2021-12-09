@@ -1,49 +1,49 @@
 "use strict"
 
-let destination = ["Seattle, WA", "Atlanta, GA", "Miami, Fl", "San Diego, CA"];
+const destination = ["Seattle, WA", "Atlanta, GA", "Miami, Fl", "San Diego, CA", "Houston, TX"];
 
-let restaurant = ["Starbucks", "Copelands", "Hunter Steakhouse", "J Alexanders"]; 
+const restaurant = ["Starbucks", "Copelands", "Hunter Steakhouse", "J Alexanders", "China Buffet"]; 
 
-let transportation = ["Uber", "Lyft", "Taxi", "Limo"]; 
+const transportation = ["Uber", "Lyft", "Taxi", "Limo", "Walk"]; 
 
-let recreationEvent = ["Concert", "Movie", "Play", "Casino"];
+const entertainment = ["Concert", "Movie", "Play", "Casino", "Ballet"];
 
-function randomTripGenerator(randomChoices) {
-    
+function tripGenerator(randomChoices) {
+    // randomChoices is the array
     return randomChoices[Math.floor(Math.random() * randomChoices.length)];   
 }
 
-let randomDestination = randomTripGenerator(destination);
+let randomDestination = tripGenerator(destination);
 console.log(randomDestination);
 
-let randomRestaurant = randomTripGenerator(restaurant);
+let randomRestaurant = tripGenerator(restaurant);
 console.log(randomRestaurant);
 
-let randomTransportation = randomTripGenerator(transportation);
+let randomTransportation = tripGenerator(transportation);
 console.log(randomTransportation);
 
-let randomRecreationEvent = randomTripGenerator(recreationEvent);
-console.log(randomRecreationEvent);
+let randomEntertainment = tripGenerator(entertainment);
+console.log(randomEntertainment);
 
-let randomTrip = [randomDestination, randomRestaurant, randomTransportation, randomRecreationEvent];
-// randomTrip is the (arrayOfFeatures)
+let randomTrip = ['randomDestination', 'randomRestaurant', 'randomTransportation', 'randomEntertainment'];
 
-function displayRandomTrip(randomTrip) {
-    let finalPreliminaryTrip = "";
+
+/*function displayRandomTrip(randomTrip) {
+    let finalTrip = "";
     for (let i = 0; i < randomTrip; i++){
-        finalPreliminaryTrip += randomTrip[i] + "\n"; 
+        finalTrip += randomTrip[i] + "\n"; 
     }
-    alert(finalPreliminaryTrip);
+    alert(finalTrip);
 
 function app() {
     let userSatisfied = false;
     while (userSatisfied === false) {
-        displayFinalPreliminaryTrip();
+        displayFinalTrip();
 
         let userInput = prompt("Do you like your trip, Yes or No");
         if (userInput === "Yes") {
             userSatisfied = true;
-            displayFinalPreliminaryTrip(randomTrip);
+            displayFinalTrip(randomTrip);
 
         } else {
             function reselectTripChoices() {    
@@ -56,29 +56,30 @@ function app() {
 
 
     function newTripSelections() {
-        displayFinalPreliminaryTrip(randomTrip);
+        displayFinalTrip(randomTrip);
         let userChoice = prompt("Which one do you wish to change? 1 for Destination \n 2 for Restaurant \n 3 for Transportation \n 4 for Event");
 
         switch (userChoice) {
             case "1":
-                trip[0] = randomTripGenerator(destination);
+                trip[0] = tripGenerator(destination);
                 break;
 
             case "2":
-                trip[1] = randomTripGenerator(restaurant);
+                trip[1] = tripGenerator(restaurant);
                 break;
 
             case "3":
-                trip[2] = randomTripGenerator(transportation);
+                trip[2] = tripGenerator(transportation);
                 break;
 
             case "4":
-                trip[3] = randomTripGenerator(recreationEvent);
+                trip[3] = tripGenerator(entertainment);
                 break;
         
             default:
-                alert("Option selected unavailable. Please tyr again! Please select 1-4.");
+                alert("Option selected unavailable. Please try again! Please select 1-4.");
                 newTripSelections();
         }
     }
 }
+*/
